@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/png" href="img/favicon.png" sizes="1024x1024">
+        <title>Portfolio Florian Racine</title>
+        <link rel="stylesheet" href="style.css" />
+        <style> @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); </style>
+    </head>
+
+    <a href="index.html" class="go-back-btn">Go Back</a>
+    <body>
+        <header class="navbar">
+            <a href="index.html" class="navbar-left">
+                <div class="name">Florian Racine</div>
+                <div class="title">Gameplay Programmer</div>
+            </a>
+
+            <div class="navbar-right">
+                <a href="https://www.linkedin.com/in/florian-racine/" target="_blank">
+                    <img src="img/linkedin-logo.png" alt="LinkedIn" class="social-logo">
+                </a>
+                <a href="https://github.com/florianRacine" target="_blank">
+                    <img src="img/github-logo.png" alt="GitHub" class="social-logo">
+                </a>
+                <a href="cv.pdf" target="_blank" class="cv-button">CV</a>
+            </div>
+        </header>
+
+
+        <div class="video-container" id="videoContainer">
+            <video src="vid/lookbehind.mp4" autoplay muted loop></video>
+
+            <div class="scroll-indicator">
+                <span></span>
+            </div>
+
+        </div>
+
+
+
+        <section class="text-section" id="textSection">
+
+            <h1>Look Behind – Jeu d’Horreur Solo</h1>
+
+            <!-- BLOCK 1 -->
+            <div class="text-block">
+                <img class="text-image" src="img/look_behind_AI.png" alt="IA sensible au champ de vision">
+                <div class="text-content">
+                    <h2>Présentation du jeu</h2>
+                    <p>
+                    <strong>Look Behind</strong> est un jeu d’horreur solo reposant sur une mécanique de vigilance.
+                    Plusieurs entités hostiles poursuivent le joueur uniquement lorsqu’elles ne sont plus visibles,
+                    générant une tension permanente liée à la gestion du champ de vision.
+                    </p>
+                </div>
+            </div>
+
+            <!-- BLOCK 2 -->
+            <h2>Mécanique centrale</h2>
+            <p>
+            Tant que les ennemis restent dans le champ de vision du joueur, ils sont immobiles.
+            Dès qu’ils en sortent, ils se déplacent automatiquement vers lui.
+            Le regard devient ainsi une ressource de gameplay essentielle, obligeant le joueur
+            à faire des choix constants entre observation et déplacement.
+            </p>
+
+            <!-- BLOCK 4 -->
+            <h2>Défis techniques</h2>
+            <ul>
+                <li>Détection fiable et performante du champ de vision.</li>
+                <li>Coordination entre IA, navigation et animations.</li>
+                <li>Création d’une tension constante sans surcharge visuelle.</li>
+            </ul>
+
+
+            <!-- BLOCK RESSOURCES -->
+            <h2>Ressources et outils utilisés</h2>
+            <ul>
+                <li>
+                    <strong>Unreal Engine 4</strong> – Utilisation des Blueprints pour la logique de gameplay
+                    et le développement de l’intelligence artificielle.
+                </li>
+                <li>
+                    <strong>Mixamo</strong> – Importation et adaptation des animations de personnages :
+                    <a href="https://www.mixamo.com/" target="_blank">https://www.mixamo.com/</a>
+                </li>
+                <li>
+                    <strong>Blender</strong> – Modélisation d’éléments d’environnement simples
+                    afin de construire une scène jouable.
+                </li>
+                <li>
+                    <strong>Tutoriels de référence</strong> – Playlist YouTube utilisée comme support :
+                    <a href="https://youtube.com/playlist?list=PLQjN2LmROiThcZsh5eVznoXA5DjqlVIxb" target="_blank">
+                        Création et animation d’un personnage
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+
+
+        <script src="game_script.js" defer></script>
+    </body>
+</html>

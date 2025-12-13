@@ -1,0 +1,741 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* OK en horizontal */
+    background: #121212;
+    font-family: Montserrat;
+}
+
+summary {
+    cursor: pointer;
+}
+
+details {
+    font-size: 1.2vh;
+}
+
+    
+
+
+
+#textSection {
+    scroll-margin-top: 12vh; /* hauteur du header */
+}
+
+
+.navbar-left {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+/* Container : 2 colonnes fixes sur PC */
+.recommendations {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2vw;
+    width: 100%;
+    /*max-width: 1200px;*/
+    margin: 1vw auto;
+}
+
+/* Chaque boîte occupe 50% - l'espace */
+.rec-box {
+    background: #232323;
+    border-radius: 2px;
+    padding: 2vw;
+    width: calc(50% - 1vw);   /* FORCE la largeur */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Image */
+.rec-img {
+    width: 8vh;
+    height: 8vh;
+    object-fit: cover;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+}
+
+/* Texte */
+.rec-content h3 {
+    margin: 0;
+    font-size: 2vh;
+    /*font-weight: bold;*/
+}
+.rec-content h4 {
+    margin: .3rem 0 1rem;
+    opacity: 0.75;
+    font-size: 1.5vh;
+    margin-bottom: 1.5rem;
+}
+.rec-content p {
+
+    font-size: 1.5vh;
+    line-height: 1.55;
+}
+
+/* MOBILE : empiler */
+@media (max-width: 1100px) {
+    .recommendations {
+        flex-direction: column !important;
+    }
+    .rec-box {
+        width: 100% !important;
+    }
+}
+
+
+
+
+.video-container {
+    margin-top: 8vh;
+    width: 99vw;
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.video-container video {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* jamais rognée, toujours visible entièrement */
+}
+
+
+
+.go-back-btn {
+    position: fixed;
+    font-size: 2vh;
+    bottom: 2vh;
+    right: 2vw;
+    padding: 1rem 1.4rem;
+    background: rgba(0,0,0,0.55);
+    color: white;
+    border-radius: 0.8rem;
+    text-decoration: none;
+    backdrop-filter: blur(6px);
+    transition: 0.25s ease;
+    z-index: 9999; /* reste au-dessus de tout */
+}
+
+/* Effet au survol */
+.go-back-btn:hover {
+    background: rgba(0,0,0,0.75);
+    transform: translateY(-3px);
+}
+
+
+/* Conteneur de la flèche + fond */
+.scroll-indicator {
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12vw;
+    height: 12vw;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.45); /* Fond sombre derrière la flèche */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px); /* Effet verre dépoli (stylé et lisible) */
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+/* La flèche elle-même */
+.scroll-indicator span {
+    width: 6vw;
+    height: 6vw;
+    border-bottom: 1vw solid white;
+    border-right: 1vw solid white;
+    transform: rotate(45deg);
+    opacity: 0.9;
+    animation: bigBounce 1.4s infinite ease-in-out;
+}
+
+/* Animation */
+@keyframes bigBounce {
+    0% {
+        transform: rotate(45deg) translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: rotate(45deg) translateY(0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: rotate(45deg) translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+/* Section texte */
+.text-section {
+    min-height: 120vh;
+    background: #111;
+    color: white;
+    /*padding: 10vw;*/
+    font-size: 1.8vh;
+    line-height: 1.8;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    width: 80vw;
+}
+
+.text-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Bloc image + texte */
+.text-block {
+    display: flex;
+    align-items: center;
+    /*gap: 3vw;*/
+    margin-bottom: 70px;
+}
+
+/* Inversion pour alterner gauche/droite sur PC */
+.text-block.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Image */
+.text-block img {
+    width: 35%;
+    border-radius: 2px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    object-fit: cover;
+}
+
+/* Texte */
+.text-content {
+    width: 60%;
+    padding:3%;
+}
+
+
+
+/* ------------------------------- */
+/* 📱 Version smartphone */
+/* ------------------------------- */
+
+@media (max-width: 1100px) {
+    .text-block,
+    .text-block.reverse {
+        flex-direction: column;   /* Image au-dessus */
+        text-align: center;
+    }
+
+    .text-block img {
+        width: 90%; /* Large image sur mobile */
+    }
+
+    .text-content {
+        width: 95%;
+    }
+}
+
+/* Animation vidéo */
+.scrolled video {
+    transform: translateY(-40%);
+}
+
+    /*background: #e2f0f0;*/
+
+/* Container global */
+.container {
+    display: flex;
+    align-items: center;
+}
+
+/* Stage */
+.stage {
+    position: relative;
+    width: 75vw;
+    height: 70vh;
+    overflow: visible;
+}
+
+/* Slider */
+.slider {
+    display: flex;
+    height: 100%;
+    margin-left: 7vw;
+    gap: 1%;           /* gap de 2% entre les rectangles */
+    transition: transform 0.3s linear;
+}
+
+/* Rectangles */
+.slide {
+    flex: 0 0 29.3%;      /* 3 rectangles visibles + 2 gaps de 2% → 30% chacun */
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    flex-direction: column;
+    border-radius: 4px;
+    background: #232323;
+}
+
+.logo-game-dev{
+    position: absolute;
+    right: 1vw;
+    bottom: 1vh;
+    height: 2vh;
+}
+
+.logo-motor{
+    position: absolute;
+    left: 1vw;
+    bottom: 1vh;
+    height: 4vh;
+}
+
+/* Effet glow au survol */
+.slide:hover {
+box-shadow: 0 0 0.5vw 0.2vw #edc1c9;
+    transform: translateY(-5px); /* Petit lift pour donner du relief */
+    cursor: pointer;
+}
+
+
+
+.slide-inner {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+
+
+
+/* Conteneur jeu */
+.game-container {
+    width: 100%; /* prend toute la largeur du slide */
+    aspect-ratio: 1920 / 1080; /* pour garder la proportion */
+    /*border: 2px solid white;*/
+    flex-shrink: 0; /* ne pas rétrécir */
+    border-radius: 4px;
+}
+
+/* Conteneur description */
+.game-description {
+    flex: 1; /* prend tout l’espace restant sous game-container */
+    overflow: auto; /* scroll si contenu trop long */
+    font-size: 1.6vh;
+    /*border: 2px solid white;*/
+    margin-top: 0; /* pas de marge par défaut */
+    width: 90%; /* prend toute la largeur du slide */
+    border-radius: 4px;
+    margin-bottom: 4vh;
+
+    color: white;
+    transform: translateY(-1vh);
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3vw;
+    color: white;
+
+    width: 5%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    z-index: 9999;
+
+    background: rgba(96, 96, 96, 0.07); /* #222 avec légère transparence */
+    backdrop-filter: blur(2px);
+
+    /* Transition pour hover */
+    transition: transform 0.2s ease, font-size 0.2s ease;
+}
+
+/* Hover : grossir la flèche */
+.arrow:hover {
+    font-size: 4vw; /* plus grande taille */
+    transform: translateY(-50%) scale(1.05); /* léger effet scale pour le zoom */
+}
+
+/* Placer exactement sur les bords de la stage */
+.arrow-left {
+    left: 2.5vw; /* bord gauche de stage */
+}
+
+.arrow-right {
+    right: 2.5vw; /* bord droit de stage */
+}
+
+
+/* Image fullscreen initiale */
+.intro-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('img/bg.jpg') center/cover no-repeat;
+    z-index: 9999; /* beaucoup plus élevé que tout le reste */
+    transform: translateX(0);
+    transition: transform 1s ease-in;
+    display: flex; /* permet de centrer facilement le texte verticalement */
+    align-items: center; /* centrage vertical */
+}
+
+/* Quand l'animation se déclenche, on slide à gauche */
+.intro-bg.slide-left {
+    transform: translateX(-100%);
+}
+
+/* Texte de bienvenue */
+.welcome-message {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin-left: 5%; /* aligné à gauche */
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+.welcome-message h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+.welcome-message p {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+}
+
+
+
+
+.about-information {
+    display: flex;
+    align-items: center;
+    align-items: flex-start;
+    gap: 20px;
+    width: 70vw;
+    padding: 20px;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    /*background: #222;*/
+    color: white;
+    height: auto;
+}
+
+
+.about-image {
+    width: 10vw;        /* taille fixe pour l'image */
+    object-fit: cover;   /* pour que l'image garde ses proportions */
+    border-radius: 4px;  /* coins arrondis */
+    flex-shrink: 0;      /* ne pas réduire */
+    transition: 0.3s ease;
+}
+
+.about-image:hover {
+    content: url("img/profile2.jpg");
+    transform: scale(1.05);
+}
+
+.about-text p {
+    font-size: 2.2vw;
+    /*color: #edc1c9;*/
+    color: #fff7af;
+    margin: 0;
+    line-height: 1.15;
+    font-weight:300;
+}
+
+
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
+h1 {
+    color: #edc1c9;
+    font-weight: 700;
+    font-size: 3vh;
+}
+
+
+.formations-section h1 {
+    margin-bottom: 2rem;
+}
+
+/* Conteneur horizontal */
+.formations-container {
+    display: flex;
+    gap: 2%; /* espace de 5vw entre les deux cartes */
+    width: 70vw;
+    margin: 0 auto;
+}
+
+/* Carte d’une formation */
+.formation-card {
+    background: #232323;
+    padding: 2rem;
+    border-radius: 4px;
+    flex: 1; /* chaque carte prend la moitié */
+    color: white;
+    font-size: 1.5vh;
+}
+
+.formation-card h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 2.5vh;
+}
+
+.formation-card .school {
+    margin-bottom: 1rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.formation-card .desc {
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+
+.school-logo {
+    display: block;
+    margin-top: 1.5rem;
+    width: auto;
+    height: 6vh;
+    opacity: 0.9;
+}
+
+.skills-section {
+    width: 70vw;
+    color: white;
+}
+
+.skills-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Liste de badges */
+.badge-list {
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px 12px 0;
+    gap: 8px;
+}
+
+.badge-list .badge {
+    font-size: 1.5vh;
+    font-weight: 500;
+    color: #e29ba7;
+    list-style: none;
+    padding: 0.8vh 1.2vh;
+    border-radius: 8px;
+    border: 1px solid #e29ba7;
+    white-space: nowrap;
+    background: rgba(255, 255, 255, 0.05); /* léger fond pour lisibilité */
+    transition: transform 0.2s ease, background 0.2s ease;
+    cursor: default;
+}
+
+/* Hover optionnel */
+.badge-list .badge:hover {
+    background: rgba(226, 155, 167, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media(min-width: 1100px) {
+    .badge-list {
+        padding: 8px 24px 0;
+    }
+}
+
+
+
+/* Navbar fixée en haut */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8vh;
+    background: #232323;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    z-index: 10000;
+    box-sizing: border-box;
+    color: #edc1c9;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Section gauche : nom + titre */
+.navbar-left .name {
+    font-size: 3vh;
+    font-weight: 700;
+    margin-left: 2vw;
+}
+
+.navbar-left .title {
+    font-size: 1.7vh;
+    opacity: 0.7;
+    margin-left: 2vw;
+}
+
+/* Section droite : logos + bouton */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-logo {
+    width: 4vh;
+    height: 4vh;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.social-logo:hover {
+    transform: scale(1.2);
+}
+
+.cv-button {
+    padding: 0.9vh 0.6vh;
+    /*background: #e29ba7;*/
+    background: #edc1c9;
+    color: #232323;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1.7vh;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.cv-button:hover {
+    background: #d17a90;
+}
+
+.highlight-section {
+    background: #fff7af;
+    width: 99vw;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    margin-bottom: 5vh;
+    margin-top: 7vh;
+}
+
+.highlight-content {
+    width: 70vw;
+    text-align: left;
+    color: #121212;
+    /*font-size: 1.1vw;*/
+    font-size: 2vh;
+    line-height: 1.6;
+}
+
+.game-pres{
+
+    width:100%;
+    height:100%;
+}
+
+/* Par défaut saturé à 0 (donc noir et blanc) */
+.saturate-hover {
+    filter: saturate(0.5);        /* pas de saturation */
+    transition: filter 0.5s ease; /* transition fluide */
+}
+
+/* Au survol : saturation normale */
+.saturate-hover:hover {
+    filter: saturate(1);        /* saturation normale */
+}
+
+
+
+@media (max-width: 1100px) {
+    .about-information {
+        flex-direction: column;
+        text-align: center; /* optionnel */
+    }
+    .about-image {
+        display: block;
+        width: 40vw;
+        margin: auto;
+    }
+    .formations-container {
+        text-align: center; /* optionnel */
+        gap: 20px;
+        flex-direction: column;
+    }
+    .highlight-content {
+        font-size: 0.8rem;
+    }
+    .about-text p {
+        font-size: 1.2rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .slide {
+        flex: 0 0 94%;
+        margin-left: -1vw;
+    }
+    
+    .arrow-right {
+        right: 0vw; /* bord droit de stage */
+    }
+    .arrow-left {
+        left: 0.5vw; /* bord droit de stage */
+    }
+    .stage {
+        position: relative;
+        width: 80vw;
+        height: 70vh;
+        overflow: hidden;
+    }
+    .slide:hover {
+        box-shadow: 0 0 0 0 #edc1c9;
+        cursor: pointer;
+    }
+    .game-description {
+        flex: 1; /* prend tout l’espace restant sous game-container */
+        overflow: auto; /* scroll si contenu trop long */
+        /*font-size: 12px;*/
+    }
+
+}

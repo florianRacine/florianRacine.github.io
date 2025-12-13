@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/png" href="img/favicon.png" sizes="1024x1024">
+        <title>Portfolio Florian Racine</title>
+        <link rel="stylesheet" href="style.css" />
+        <style> @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); </style>
+    </head>
+
+    <a href="index.html" class="go-back-btn">Go Back</a>
+    <body>
+        <header class="navbar">
+            <a href="index.html" class="navbar-left">
+                <div class="name">Florian Racine</div>
+                <div class="title">Gameplay Programmer</div>
+            </a>
+
+            <div class="navbar-right">
+                <a href="https://www.linkedin.com/in/florian-racine/" target="_blank">
+                    <img src="img/linkedin-logo.png" alt="LinkedIn" class="social-logo">
+                </a>
+                <a href="https://github.com/florianRacine" target="_blank">
+                    <img src="img/github-logo.png" alt="GitHub" class="social-logo">
+                </a>
+                <a href="cv.pdf" target="_blank" class="cv-button">CV</a>
+            </div>
+        </header>
+
+
+        <div class="video-container" id="videoContainer">
+            <video src="vid/liferaft.mp4" autoplay muted loop></video>
+
+            <div class="scroll-indicator">
+                <span></span>
+            </div>
+
+        </div>
+
+
+
+        <section class="text-section" id="textSection">
+
+
+            <h1>Life Raft – Multiplayer Cooperative Gameplay</h1>
+
+            <!-- BLOCK 1 : Présentation -->
+            <div class="text-block">
+                <img class="text-image" src="img/lifeRaft1.jpg" alt="Présentation de Life Raft">
+                <div class="text-content">
+                    <h2>Présentation du jeu</h2>
+                    <p>
+                    <strong>Life Raft</strong> est un jeu multijoueur coopératif où les joueurs doivent maintenir leur radeau à flot
+                    jusqu'à atteindre une île. Chaque action compte : récupérer du bois, réparer les trous, et gérer les imprévus.                    </p>
+                </div>
+            </div>
+
+            <!-- BLOCK 2 : Règles du jeu -->
+            <div class="text-block reverse">
+                <img class="text-image" src="img/lifeRaft2.jpg" alt="Interface utilisateur de Life Raft">
+                <div class="text-content">
+                    <h2>Règles principales</h2>
+                    <p>
+                    Les joueurs choisissent un personnage avec
+                    des capacités spécifiques. Puis à chaque tour, utilisent leurs
+                    cartes actions
+                    pour rapprocher le bois afin d’éviter la création de trous,
+                    se déplacer ou réparer un trou. 
+                    Attention aux trous dans le radeau qui peuvent causer la perte de la partie.
+
+                    </p>
+                </div>
+            </div>
+
+            <!-- BLOCK 3 : Conception Interface / Frontend -->
+            <div class="text-block">
+                <img class="text-image" src="img/interfaceUtilisateurLifeRaft.png" alt="Interface utilisateur de Life Raft">
+                <div class="text-content">
+                    <h2>Interface & Frontend</h2>
+                    <p>
+                    L'interface reprend certains principes d'un précédent projet, avec :
+                    </p>
+                    <ul>
+                        <li>Entête de page avec boutons (Logout, Lobby)</li>
+                        <li>Affichage de la liste des joueurs</li>
+                        <li>Liste des cartes en pied de page</li>
+                    </ul>
+                    <p>
+                    De plus, deux tableaux fixes ont été ajoutés pour placer les morceaux de bois et des animations améliorent le réalisme du radeau en mouvement.
+                    </p>
+                    <p>
+                    Des sons immersifs renforcent l'expérience : musique de fond, sons de requins, actions interdites, dépôt de cartes, etc. Une IA gère la narration et le tutorial.
+                    </p>
+                </div>
+            </div>
+
+            <!-- BLOCK 4 : Multijoueur -->
+            <div class="text-block reverse">
+                <img class="text-image" src="img/choixPerso.jpg" alt="Choix des personnages Life Raft">
+                <div class="text-content">
+                    <h2>Partie Multijoueur</h2>
+                    <p>
+                    Chaque joueur choisit un personnage avec des compétences uniques :
+                    </p>
+                    <ul>
+                        <li>Zeus : se déplace sans consommer de tour</li>
+                        <li>Achille : répare les trous sans être sur place</li>
+                        <li>Ariane : utilise des jokers pour se déplacer ou réparer</li>
+                        <li>Athena : rapproche les bois sans contrainte de position</li>
+                    </ul>
+                    <p>
+                    Trois rôles sont disponibles : administrateur, joueur et spectateur. Les variables partagées sont synchronisées via un serveur pour que chaque joueur ait une vue cohérente du jeu.
+                    </p>
+                </div>
+            </div>
+
+            <!-- BLOCK 5 : Tutoriel -->
+            <div class="text-block">
+                <img class="text-image" src="img/pageAideLifeRaft.jpg" alt="Tutoriel Life Raft">
+                <div class="text-content">
+                    <h2>Tutoriel</h2>
+                    <p>
+                    Le tutoriel guide les joueurs avec des boîtes de dialogues et des audios pour expliquer les mécaniques importantes du jeu.
+                    </p>
+                </div>
+            </div>
+
+            <!-- BLOCK 6 : Phase de Test et Amélioration -->
+            <div class="text-block reverse">
+                <img class="text-image" src="img/nouvelleInterfaceUtilisateur.jpg" alt="Nouvelle interface utilisateur Life Raft">
+                <div class="text-content">
+                    <h2>Phase de Test & Amélioration</h2>
+
+                    <p>
+                    Notre équipe a réalisé une séance de test avec une dizaine de joueurs chez Thales DIS pour identifier les bugs et ajuster le gameplay.
+                    </p>
+                    <p>
+                    Les tests ont permis d'ajouter de nouvelles fonctionnalités :
+                    </p>
+                    <ul>
+                        <li>Pause du jeu par l'administrateur</li>
+                        <li>Exclusion de joueurs par l'administrateur</li>
+                        <li>Amélioration de la lisibilité de la police</li>
+                        <li>Affichage des noms des joueurs sur leurs personnages</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- BLOCK 7 : Interface Administrateur -->
+            <div class="text-block">
+                <img class="text-image" src="img/nouvelleInterfaceAdministrateur.jpg" alt="Interface administrateur Life Raft">
+                <div class="text-content">
+                    <h2>Interface Administrateur</h2>
+                    <p>
+                    Interface dédiée à l'administrateur pour gérer la partie, contrôler les joueurs et le déroulement du jeu.
+                    </p>
+                </div>
+            </div>
+
+
+
+            <h2>Recommandations en relation</h2>
+            <div class="recommendations">
+
+                <div class="rec-box">
+                    <img src="img/1516495604375.jpeg" alt="Bontemps Marie-Line" class="rec-img">
+                    <div class="rec-content">
+                        <h3>Bontemps Marie-Line</h3>
+                        <h4>Data Scientist chez Thales DIS</h4>
+                        <p>
+                        Florian a rejoint notre équipe pendant 3 mois pour le
+                        développement de jeux sérieux multijoueurs en
+                        HTML/CSS/Javascript/Socket.io dans une architecture
+                        client-serveur.  Il a montré une capacité d'apprentissage hors
+                        norme, une motivation peu commune et une autonomie parfaite.
+                        </p>
+                        <p>
+                        Il a été force de proposition quant à l'architecture des jeux
+                        avec un souci de la maintenance et des futurs développeurs qui
+                        interviendront sur le même sujet, ainsi que sur les
+                        fonctionalités utiles pour les utilisateurs finaux.  En effet,
+                        il a autant la vision globale du projet que le souci du détail,
+                        que ce soit du point de vue qualité du code et de la
+                        documentation associée, qu'en ce qui concerne le graphisme, qui
+                        est époustouflant.  Très humble, il a fourni un travail de
+                        grande qualité, a su partager son savoir et son savoir-faire
+                        avec un autre stagiaire, s'est intégré dans l'équipe très
+                        rapidement.                 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="rec-box">
+                    <img src="img/1605167320876.jpeg" alt="Anne-Marie Chopinet" class="rec-img">
+                    <div class="rec-content">
+                        <h3>Anne-Marie Chopinet</h3>
+                        <h4>Head of Transformation & Change Management – Thales</h4>
+                        <p>
+                        Florian a été un stagiaire exceptionnel qui nous a démontré, en
+                        seulement trois mois, une grande maturité professionnelle et
+                        les qualités d’un excellent architecte et développeur.  Avec
+                        toute la simplicité et l’humilité qui le caractérise, il a été
+                        non seulement un collaborateur performant mais aussi un
+                        collègue qui a su s’intégrer rapidement à l’équipe pour
+                        apporter un regard neuf et faire des propositions
+                        d’amélioration et des innovations, sur le projet qu’il pilotait
+                        en autonomie, tout à fait pertinentes 
+                        </p>
+
+                        <p>
+                        Sa mission a consisté à développer des jeux sérieux afin
+                        d’initier et de favoriser la collaboration au sein des
+                        communautés de Thales DIS.  Il a su s’organiser pour être très
+                        efficace sur chacune des phases de sa mission : design
+                        graphique, architecture du jeu, choix technique client/serveur,
+                        développement du code, documentation, tout en anticipant le
+                        travail de futurs développeurs qui poursuivront ces
+                        développements.
+                        </p>
+
+                        <p>
+                        Au final, il a développé plus de jeux que ce que nous avions
+                        prévu initialement, et le tout avec une qualité graphique et
+                        fonctionnelle bien au-dessus de nos attentes.                
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <script src="game_script.js" defer></script>
+    </body>
+</html>

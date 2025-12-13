@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="img/favicon.png" sizes="1024x1024">
+        <title>Portfolio Florian Racine</title>
+        <meta name="description" content="Portfolio de Florian Racine, Gameplay Programmer. Découvrez mes projets, démos et travaux techniques en programmation de jeux vidéo.">
+        <link rel="stylesheet" href="style.css">
+        <style> @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); </style>
+    </head>
+
+    <body>
+        <header class="navbar">
+            <a href="index.html" class="navbar-left">
+                <div class="name">Florian Racine</div>
+                <div class="title">Gameplay Programmer</div>
+            </a>
+
+            <div class="navbar-right">
+                <a href="https://www.linkedin.com/in/florian-racine/" target="_blank">
+                    <img src="img/linkedin-logo.png" alt="LinkedIn" class="social-logo">
+                </a>
+                <a href="https://github.com/florianRacine" target="_blank">
+                    <img src="img/github-logo.png" alt="GitHub" class="social-logo">
+                </a>
+                <a href="cv.pdf" target="_blank" class="cv-button">CV</a>
+            </div>
+        </header>
+
+        <!--<div class="intro-bg" id="intro-bg">-->
+        <!--<div class="welcome-message">-->
+        <!--<h1>Bienvenue sur mon portfolio</h1>-->
+        <!--<p>Découvrez mes projets et créations.</p>-->
+        <!--</div>-->
+        <!--</div>-->
+
+
+        <div class="about-information">
+            <img src="img/profile.jpg" alt="Profil" class="about-image">
+            <div class="about-text">
+                <p>Passionné par la création de mécaniques de jeu et la programmation de systèmes, je m’investis dans l’écriture d’un code soigné et performant. J’adore explorer de nouvelles idées, optimiser, et transformer des concepts en fonctionnalités jouables.</p>
+            </div>
+        </div>
+
+        <div id="section">
+            <h1> Jeux développés </h1>
+            <div class="stage">
+                <div class="slider" id="slider">
+
+                    <div class="slide" onclick="window.location.href='lifeRaft.html'">
+                        <div class="game-container">
+                            <video src="vid/liferaft.mp4" class="game-pres saturate-hover" autoplay loop muted playsinline> </video>
+                        </div>
+                        <div class="game-description">
+
+
+                            <h2>Life Raft</h2>
+
+                            <p>Un jeu coopératif où les joueurs doivent maintenir leur radeau à flot jusqu'à atteindre une île.</p>
+
+                            <ul>
+                                <li><strong>Personnages uniques :</strong> Chaque joueur choisit un personnage aux capacités spécifiques, gérées par programmation orientée objet.</li>
+                                <li><strong>Drag & drop de cartes :</strong> Les joueurs déplacent leurs cartes pour réparer le radeau ou rapprocher le bois.</li>
+                                <li><strong>Multijoueur dynamique :</strong> Objets et variables partagées sont synchronisés en temps réel pour une expérience fluide.</li>
+                            </ul>
+
+                        </div>
+                        <img src="img/thales-logo.png" class="logo-game-dev">
+                        <img src="img/js.png" class="logo-motor">
+                    </div>
+
+                    <div class="slide" onclick="window.location.href='lostRobot.html'">
+                        <div class="game-container">
+                            <video src="vid/lostrobot.mp4" class="game-pres saturate-hover" autoplay loop muted playsinline> </video>
+                        </div>
+                        <div class="game-description">
+
+                            <h2>Lost Robot</h2>
+
+                            <p>Un jeu coopératif où les joueurs doivent fermer toutes les sorties pour piéger un robot.</p>
+
+                            <ul>
+                                <li><strong>Mécaniques conditionnelles :</strong> 32 façons de relier les cartes, gérées par un algorithme générique pour valider chaque action selon le contexte.</li>
+                                <li><strong>Prévisualisation en temps réel :</strong> Placement des cartes anticipé grâce à un rendu dynamique, feedback sonore et ajustements de caméra.</li>
+                            </ul>
+                        </div>
+                        <img src="img/thales-logo.png" class="logo-game-dev">
+                        <img src="img/js.png" class="logo-motor">
+                    </div>
+
+                    <div class="slide" onclick="window.location.href='theGuardians.html'">
+                        <div class="game-container">
+                            <video src="vid/theguardians.mp4" class="game-pres saturate-hover" autoplay loop muted playsinline> </video>
+                        </div>
+                        <div class="game-description">
+
+                            <h2>The Guardians</h2>
+
+                            <p>Un jeu coopératif où les joueurs doivent éliminer des malwares et protéger leur réseau.</p>
+
+                            <ul>
+                                <li><strong>Placement de cartes :</strong> Gestion des recouvrements et validité via drag & drop avec mise à jour dynamique.</li>
+                                <li><strong>Structures de données :</strong> Plateau en arbre et coins des cartes suivis par une hash map pour accès rapide.</li>
+                                <li><strong>Multijoueur :</strong> Actions et variables synchronisées en temps réel via Socket.IO.</li>
+                            </ul>
+
+                        </div>
+                        <img src="img/thales-logo.png" class="logo-game-dev">
+                        <img src="img/js.png" class="logo-motor">
+                    </div>
+
+                    <div class="slide" onclick="window.location.href='lookBehind.html'">
+                        <div class="game-container">
+                            <video src="vid/lookbehind.mp4" class="game-pres saturate-hover" autoplay loop muted playsinline> </video>
+                        </div>
+                        <div class="game-description">
+                            <h2>Look Behind</h2>
+
+                            <p>Un jeu d’horreur solo où plusieurs IA vous poursuivent si vous ne les regardez pas, testant vigilance et stratégie face à plusieurs menaces.</p>
+
+                            <ul>
+                                <li><strong>IA adaptative :</strong> Plusieurs intelligences artificielles suivent le joueur selon son champ de vision, gérées via Blueprints Unreal Engine.</li>
+                                <li><strong>Animations dynamiques :</strong> Mouvements et transitions animés en temps réel pour un rendu fluide et immersif.</li>
+                            </ul>
+                        </div>
+                        <img src="img/unreal.png" class="logo-motor">
+                    </div>
+
+                    <div class="slide" onclick="window.location.href='cardsRobbery.html'">
+                        <div class="game-container">
+                            <video src="vid/cardsrobbery.mp4" class="game-pres saturate-hover" autoplay loop muted playsinline> </video>
+                        </div>
+                        <div class="game-description">
+
+                            <h2>Cards Robbery</h2>
+
+                            <p>Un jeu coopératif où les joueurs ferment les entrées du terrain en se coordonnant sur des cadenas communs.</p>
+
+                            <ul>
+                                <li><strong>Fluidité multijoueur :</strong> Mouvements et actions synchronisés en temps réel avec optimisation du code et gestion de la latence.</li>
+                                <li><strong>Interactions précises :</strong> Hitbox gérant collisions et événements pour un gameplay exact.</li>
+                                <li><strong>Collaboration :</strong> Cadenas nécessitant deux joueurs et pression temporelle avec l’apparition de zombies.</li>
+                            </ul>
+                        </div>
+                        <img src="img/thales-logo.png" class="logo-game-dev">
+                        <img src="img/js.png" class="logo-motor">
+                    </div>
+                </div>
+                <div class="arrow arrow-left">&#10094;</div>
+                <div class="arrow arrow-right">&#10095;</div>
+            </div>
+        </div>
+
+        <div class="formations-section">
+    <h1>Formations</h1>
+
+    <div class="formations-container">
+
+        <!-- Centrale Marseille -->
+        <div class="formation-card">
+            <h2>Diplôme d'Ingénieur Centralien</h2>
+            <p class="school">Centrale Méditerranée, France | 2020 - 2025</p>
+            <p class="desc">
+            Renforcement des compétences en algorithmique avancée, optimisation et résolution de problèmes combinatoires,
+            avec un solide bagage scientifique en mathématiques, physique, mécanique et théorie du signal.
+            </p>
+
+            <!-- Dépliant des cours -->
+            <details>
+                <summary>Liste des cours suivis (non exhaustive)</summary>
+                <ul>
+                    <li>Informatique théorique et logique</li>
+                    <li>Systèmes intelligents et intelligence artificielle</li>
+                    <li>Bases de données et modélisation logicielle</li>
+                    <li>Algorithmique avancée et combinatoire</li>
+                    <li>Optimisation de programmes et performance</li>
+                    <li>C++ avancé et structures de données</li>
+                    <li>Mathématiques appliquées et discrètes</li>
+                    <li>Algorithmique de graphes et programmation dynamique</li>
+                    <li>Cinématiques et aspects techniques du gameplay</li>
+                </ul>
+            </details>
+
+            <img src="img/logo_ecm.png" class="school-logo" alt="Logo Centrale Marseille">
+        </div>
+
+
+        <!-- Master TU Wien -->
+        <div class="formation-card">
+            <h2>Master en Informatique</h2>
+            <p class="school">TU Wien, Vienne, Autriche | 2023 - 2025</p>
+            <p class="desc">
+                Développement d’un fort bagage en algorithmique complexe et optimisation de programmes,
+                avec des compétences avancées en C++.
+            </p>
+            
+            <!-- Dépliant des cours -->
+            <details>
+                <summary>Liste des cours suivis (non exhaustive)</summary>
+                <ul>
+                    <li>Algorithmes de dessin de graphes</li>
+                    <li>Géométrie algorithmique</li>
+                    <li>Algorithmes aléatoires</li>
+                    <li>Techniques d’optimisation heuristiques</li>
+                    <li>Systèmes basés sur la logique et la connaissance symbolique</li>
+                    <li>IA basée sur les neurosciences</li>
+                    <li>Logique et calculabilité</li>
+                    <li>Algorithmique et mathématiques discrètes</li>
+                    <li>Théorie des bases de données</li>
+                    <li>Théorie des langages et complexité</li>
+                    <li>Programmation dynamique et optimisation</li>
+                    <li>Modélisation objet, architecture MVC</li>
+                    <li>SQL, conception et gestion de bases de données</li>
+                    <li>Analyse numérique, flot optimal, mathématiques appliquées</li>
+                </ul>
+            </details>
+
+            <img src="img/logo_tu.png" class="school-logo" alt="Logo TU Wien">
+        </div>
+
+    </div>
+            <section class="skills-section">
+                <h1>Compétences</h1>
+                <ul class="badge-list">
+                    <li class="badge">C++</li>
+                    <li class="badge">C</li>
+                    <li class="badge">Unreal Engine</li>
+                    <li class="badge">JavaScript</li>
+                    <li class="badge">BASIC</li>
+                    <li class="badge">Git</li>
+                    <li class="badge">Java</li>
+                    <li class="badge">Python</li>
+                </ul>
+            </section>
+        </div>
+
+        <section class="highlight-section">
+
+            <div class="highlight-content">
+                <h2>Salut !</h2>
+                <p>
+                Je suis un <strong>programmeur gameplay et systèmes</strong>
+                de 24 ans, actuellement en fin de double diplôme entre
+                <strong>Centrale Méditerranée</strong> et la <strong>TU
+                    Wien</strong>, dont je serai officiellement diplômé le
+                <strong>10 janvier 2026</strong>.  </p>
+
+                <p> Passionné par la création de jeux vidéo, j’aime concevoir
+                des mécaniques et des systèmes qui procurent de bonnes
+                sensations de jeu, avec un code <strong>propre</strong>,
+                <strong>clair</strong> et <strong>efficace</strong>. J’adore
+                résoudre des problèmes complexes, chercher de nouvelles idées,
+                et approfondir ma compréhension technique pour progresser
+                constamment.  </p>
+
+                <p> Je suis actuellement à la recherche d’un <strong>poste à
+                    partir de mi-décembre 2025</strong>, dans un environnement où
+                je pourrai développer des fonctionnalités gameplay impactantes tout
+                en continuant à évoluer.  </p>
+
+                <p> Envie d’en savoir plus ? Vous trouverez toutes mes
+                informations de contact dans mon CV en haut de la page, et vous
+                pouvez également me joindre via <strong>LinkedIn</strong>.
+                </p>
+            </div>
+            <script src="script.js"></script>
+    </body>
+</html>
