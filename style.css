@@ -152,6 +152,7 @@ details {
     pointer-events: auto;
     cursor: pointer;
     z-index: 9999;
+    animation: bounce 1s infinite;
 }
 
 /* La flèche elle-même */
@@ -182,6 +183,11 @@ details {
 }
 
 
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+    40% { transform: translateX(-50%) translateY(10px); }
+    60% { transform: translateX(-50%) translateY(5px); }
+}
 
 /* Section texte */
 .text-section {
@@ -686,6 +692,26 @@ h1 {
 }
 
 
+
+@view-transition {
+    navigation: auto;
+}
+
+/* Transition par défaut */
+::view-transition-old(*),
+::view-transition-new(*) {
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+}
+
+/* Effet générique */
+::view-transition-old(*) {
+    animation-name: vt-out;
+}
+
+::view-transition-new(*) {
+    animation-name: vt-in;
+}
 
 @media (max-width: 1100px) {
     .about-information {

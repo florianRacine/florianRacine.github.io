@@ -66,3 +66,16 @@ function updateArrowsVisibility() {
 }
 updateArrowsVisibility();
 window.addEventListener("resize", updateArrowsVisibility);
+
+
+function goToPage(videoName, url) {
+    // Masquer toutes les vidéos
+    document.querySelectorAll("video").forEach(v => {
+        if (v.style.viewTransitionName !== videoName) {
+            v.style.opacity = 0;
+        }
+    });
+
+    // Ensuite, naviguer
+    location.href = url;
+}
