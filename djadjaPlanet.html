@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                    })(window,document,'script','dataLayer','GTM-T5MN75NP');</script>
+        <!-- End Google Tag Manager -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/png" href="favicon16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="favicon32.png" sizes="32x32">
+        <title>Portfolio Florian Racine</title>
+        <link rel="stylesheet" href="style.css" />
+        <style> @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); </style>
+    </head>
+
+    <a href="index.html" class="go-back-btn">Go Back</a>
+    <body>
+        <header class="navbar">
+            <a href="index.html" class="navbar-left">
+                <div class="name">Florian Racine</div>
+                <div class="title">Programmeur Gameplay</div>
+            </a>
+
+            <div class="navbar-right">
+                <a href="https://www.linkedin.com/in/florian-racine/" target="_blank">
+                    <img src="img/linkedin-logo.png" alt="LinkedIn" class="social-logo">
+                </a>
+                <a href="https://github.com/florianRacine" target="_blank">
+                    <img src="img/github-logo.png" alt="GitHub" class="social-logo">
+                </a>
+                <a href="cv.pdf" target="_blank" class="cv-button">CV</a>
+            </div>
+        </header>
+
+
+        <div class="video-container" id="videoContainer">
+            <video src="vid/djadjaPlanet.mp4" autoplay muted loop style="view-transition-name: djadjaplanet-video;"> </video>
+
+            <div class="scroll-indicator">
+                <span></span>
+            </div>
+        </div>
+
+
+        <!-- CONTENU TEXTE -->
+        <section class="text-section" id="textSection">
+
+            <h1>Djadja Planet – Expérience de jeu stylisée</h1>
+
+            <!-- PRÉSENTATION -->
+            <div class="text-block">
+                <img class="text-image" src="img/djadjaplanet_logo.png" alt="Djadja Planet">
+                <div class="text-content">
+                    <h2>Vision du projet</h2>
+                    <p>
+                    <strong>Djadja Planet</strong> est une expérience de jeu stylisée
+                    axée sur le <strong>game feel</strong>, la lisibilité du mouvement
+                    et l’expressivité des animations.
+                    Le joueur incarne un personnage vivant et réactif évoluant dans un
+                    univers coloré et affirmé, où chaque action est pensée pour être
+                    <strong>intuitive, fluide et gratifiante</strong>.
+                    </p>
+                    <p>
+                    Au-delà de l’aspect ludique, le jeu propose une approche
+                    <strong>pédagogique subtile</strong> :
+                    amener le joueur à comprendre et intégrer les principes du
+                    <strong>tri sélectif</strong> par le jeu, sans jamais rompre le rythme
+                    ni l’immersion.
+                    </p>
+                </div>
+            </div>
+
+            <!-- DÉMO -->
+            <h2>Démo jouable</h2>
+            <p>
+            Une version jouable est disponible en ligne et permet d’expérimenter
+            directement le cœur du gameplay.
+            La démo met en avant les déplacements, le système d’animations
+            et la mécanique centrale dans une situation de jeu concrète.
+            </p>
+            <p>
+            👉 <a href="https://vicohess.itch.io/djadjaplanet" target="_blank">
+                Jouer à la démo sur itch.io
+            </a>
+            </p>
+
+            <!-- GAMEPLAY -->
+            <h2>Mécanique centrale</h2>
+            <p>
+            Le gameplay repose sur une boucle simple en apparence, mais
+            finement travaillée.
+            Le joueur explore librement l’environnement, optimise ses trajectoires
+            et gère son <strong>rythme de déplacement</strong>.
+            Lorsqu’un déchet est récupéré, il doit être analysé puis déposé dans la
+            <strong>poubelle correspondante</strong>.
+            </p>
+            <p>
+            Cette interaction clé s’effectue via un <strong>saut contextuel</strong>,
+            déclenchant une animation dédiée, synchronisée avec précision
+            entre l’input joueur, la physique et le feedback visuel.
+            Le tri devient alors un <strong>acte de jeu à part entière</strong>,
+            lisible, satisfaisant et mémorable.
+            </p>
+
+            <!-- DESIGN -->
+            <h2>Intentions de design</h2>
+            <p>
+            Les mécaniques sont volontairement épurées afin de concentrer
+            l’expérience sur le <strong>polish</strong>, la cohérence visuelle
+            et la qualité des sensations.
+            Chaque animation, transition et timing est pensé pour renforcer
+            le sentiment de maîtrise et de contrôle.
+            </p>
+            <p>
+            L’objectif est de créer une expérience où le joueur apprend,
+            expérimente et progresse <strong>sans jamais avoir l’impression
+                d’être guidé</strong>, en intégrant naturellement les règles
+            du tri sélectif par l’action et la répétition.
+            </p>
+
+            <!-- TECH -->
+            <h2>Défis techniques</h2>
+            <ul>
+                <li>
+                    Conception d’un système d’animations expressif
+                    (idle, déplacement, course, saut contextuel).
+                </li>
+                <li>
+                    Synchronisation fine entre logique de gameplay,
+                    animations et feedbacks visuels.
+                </li>
+                <li>
+                    Maintien d’un contrôle précis et réactif tout en conservant
+                    une forte lisibilité des actions à l’écran.
+                </li>
+                <li>
+                    Construction d’une boucle de jeu pédagogique intégrée
+                    naturellement au flow du joueur.
+                </li>
+            </ul>
+
+            <!-- OUTILS -->
+            <h2>Ressources et outils utilisés</h2>
+            <ul>
+                <li>
+                    <strong>Unity</strong> – Développement du gameplay,
+                    gestion des déplacements, des interactions et du flow joueur.
+                </li>
+                <li>
+                    <strong>Animator Controller</strong> – Création d’un
+                    graphe d’états complexe assurant des transitions fluides
+                    et cohérentes.
+                </li>
+                <li>
+                    <strong>Direction artistique</strong> – Recherche visuelle,
+                    palette de couleurs et identité forte au service de la lisibilité
+                    et de l’immersion.
+                </li>
+            </ul>
+
+        </section>
+        <script src="game_script.js" defer></script>
+    </body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5MN75NP"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</html>
